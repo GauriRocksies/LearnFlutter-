@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'avatar/circleDemo.dart';
+import 'avatar/styleTh.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: styleTh(
+          // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          //   useMaterial3: true,
+          ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -36,10 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      title: Text("HELLO", style: TextStyle(height:12),),
+        title: Text(
+          "HELLO",
+          style: Theme.of(context).textTheme.headlineLarge,
+        ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
       body: circleDemo(),
-      
     );
   }
 }

@@ -1,30 +1,19 @@
 import 'package:flutter/material.dart';
 
-class styleTh extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      // child: Container(
-      //   width: 100,
-      //   height: 100,
-      child: CircleAvatar(
-        //backgroundImage: AssetImage('assets/images/SNOOT.jpg'),
-        backgroundColor: Colors.amber,
-        child: Column(
-          children: [
-            Container(
-                height: 200,
-                width: 200,
-                child: Image.asset('assets/images/girl.png')),
-            Text('Name',
-                style: TextStyle(
-                    fontFamily: 'FontHoney',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 26)),
-          ],
-        ),
-        maxRadius: 120,
-      ),
-    );
-  }
+ThemeData styleTh() {
+  return ThemeData(
+    //primarySwatch: Colors.blue,
+    colorScheme:
+        ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 85, 26, 186)),
+    useMaterial3: true,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color.fromRGBO(74, 20, 140, 1),
+      foregroundColor: Colors.white,
+    ),
+    textTheme: TextTheme(
+      headlineLarge: TextStyle(
+          fontSize: 25, fontWeight: FontWeight.bold, color: Colors.green[200]),
+      headlineMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+    ),
+  );
 }
