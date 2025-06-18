@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class circleDemo extends StatelessWidget {
+class styleTh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(

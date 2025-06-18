@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      title: Text("HELLO"),
+      title: Text("HELLO", style: TextStyle(height:12),),
       ), // This trailing comma makes auto-formatting nicer for build methods.
       body: circleDemo(),
       
