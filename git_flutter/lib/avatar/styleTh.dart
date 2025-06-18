@@ -13,7 +13,7 @@ ThemeData styleTh() {
     textTheme: TextTheme(
       headlineLarge: TextStyle(
           fontSize: 25, fontWeight: FontWeight.bold, color: Colors.green[200]),
-      headlineMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+      headlineMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
     ),
   );
 }
