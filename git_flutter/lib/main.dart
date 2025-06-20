@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:git_flutter/avatar/card.dart';
 import 'avatar/circleDemo.dart';
 import 'avatar/styleTh.dart';
+import 'avatar/card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,10 +41,20 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           "HELLO",
-          style: Theme.of(context).textTheme.headlineLarge,
+          style: Theme.of(context)
+              .textTheme
+              .headlineLarge!
+              .copyWith(color: Color.fromRGBO(228, 205, 233, 1)),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-      body: circleDemo(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            circleDemo(),
+            SizedBox(height: 10,),
+            cardDemo(),
+          ],
+        )),
     );
   }
 }
