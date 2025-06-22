@@ -15,9 +15,11 @@ class userInput extends StatelessWidget {
             child: Column(
               children: [
                 TextField(
+                 // keyboardType: TextInputType.phone,
                   //enabled: false,
                   controller: emailText,
                   decoration: InputDecoration(
+                    hintText: 'Enter Email',
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide(
@@ -38,7 +40,7 @@ class userInput extends StatelessWidget {
                         borderSide: BorderSide(
                           color: Colors.red,
                         )),
-                    suffixText: "username exists",
+                    //suffixText: "username exists",
                     suffixIcon: IconButton(
                       icon: Icon(
                         Icons.remove_red_eye,
@@ -55,13 +57,16 @@ class userInput extends StatelessWidget {
                 Container(height: 11),
                 TextField(
                   obscureText: true,
+                  obscuringCharacter: '*',
                   decoration: InputDecoration(
+                      hintText: 'Enter Password',
+                      prefixIcon: Icon(Icons.password_outlined),
                       border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(11),
-                    borderSide: BorderSide(
-                      color: Colors.red,
-                    ),
-                  )),
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.red,
+                        ),
+                      )),
                 ),
                 ElevatedButton(
                     onPressed: () {
