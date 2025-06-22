@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'styleTh.dart';
 
 class userInput extends StatelessWidget {
-  const userInput({super.key});
+  //const userInput({super.key});
+  final TextEditingController emailText;
+
+  const userInput({super.key, required this.emailText});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +16,7 @@ class userInput extends StatelessWidget {
               children: [
                 TextField(
                   //enabled: false,
+                  controller: emailText,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -42,11 +46,15 @@ class userInput extends StatelessWidget {
                       ),
                       onPressed: () {},
                     ),
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(
+                      Icons.email,
+                      color: Colors.purple[400],
+                    ),
                   ),
                 ),
                 Container(height: 11),
                 TextField(
+                  obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
@@ -54,7 +62,14 @@ class userInput extends StatelessWidget {
                       color: Colors.red,
                     ),
                   )),
-                )
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      String tf1 = emailText.text.toString();
+
+                      print("EMail: $tf1");
+                    },
+                    child: Text('Login'))
               ],
             )));
   }

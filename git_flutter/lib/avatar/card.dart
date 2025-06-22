@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'styleTh.dart';
+import 'userInput.dart';
 
 class cardDemo extends StatelessWidget {
-  const cardDemo({super.key});
+  const cardDemo({super.key, required this.emailText});
+  final TextEditingController emailText;
 
   @override
   Widget build(BuildContext context) {
@@ -11,22 +13,22 @@ class cardDemo extends StatelessWidget {
         children: [
           SizedBox(
             width: double.infinity,
-            height: 120,
+            height: 190,
             child: Card(
-                elevation: 3,
-                child: Text(
-                  "Name = Gauri",
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                color: const Color.fromARGB(255, 204, 180, 238),
-                shadowColor: Colors.deepPurple,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                )),
+              elevation: 3,
+              child: userInput(
+                emailText: emailText,
+              ),
+              color: const Color.fromARGB(255, 255, 255, 255),
+              shadowColor: Colors.deepPurple,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
           ),
           SizedBox(
             width: double.infinity,
-            height: 120,
+            height: 100,
             child: Card(
                 elevation: 3,
                 child: Text(
@@ -41,7 +43,7 @@ class cardDemo extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            height: 120,
+            height: 100,
             child: Card(
                 elevation: 3,
                 child: Text(
