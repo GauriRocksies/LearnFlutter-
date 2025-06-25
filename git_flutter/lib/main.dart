@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:git_flutter/avatar/card.dart';
 import 'avatar/circleDemo.dart';
 import 'avatar/styleTh.dart';
-import 'avatar/card.dart';
+//import 'avatar/card.dart';
 
 void main() {
   runApp(const MyApp());

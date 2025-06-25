@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 //import 'dart:async';
 
 class DateTimeDemo extends StatefulWidget {
@@ -17,7 +18,7 @@ class _DateTimeDemoState extends State<DateTimeDemo> {
     return Center(
       child: Column(
         children: [
-          Text('Current time : ${time.month}'),
+          Text('Current date : ${DateFormat('yMMMMd').format(time)}'),
           ElevatedButton(
               onPressed: () {
                 setState(() {});
