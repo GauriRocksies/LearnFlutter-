@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:git_flutter/avatar/DatePicker.dart';
 //import 'styleTh.dart';
 import 'userInput.dart';
 import 'CurrentDateTime.dart';
+//import 'DatePicker.dart';
 
 class cardDemo extends StatelessWidget {
   const cardDemo({super.key, required this.emailText});
@@ -21,7 +23,7 @@ class cardDemo extends StatelessWidget {
                 child: userInput(
                   emailText: emailText,
                 ),
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 0, 0, 0),
                 shadowColor: Colors.deepPurple,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -30,13 +32,10 @@ class cardDemo extends StatelessWidget {
             ),
             SizedBox(
               width: double.infinity,
-              height: 100,
+              height: 300,
               child: Card(
                   elevation: 3,
-                  child: Text(
-                    "Age = 20",
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
+                  child: DatePickerWidget(),
                   color: const Color.fromARGB(255, 184, 147, 236),
                   shadowColor: Colors.deepPurple,
                   shape: RoundedRectangleBorder(
@@ -45,7 +44,7 @@ class cardDemo extends StatelessWidget {
             ),
             SizedBox(
               width: double.infinity,
-              height: 190,
+              height: 100,
               child: Card(
                   elevation: 3,
                   child: DateTimeDemo(),
