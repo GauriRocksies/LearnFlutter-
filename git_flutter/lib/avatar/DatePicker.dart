@@ -8,16 +8,14 @@ class DatePickerWidget extends StatefulWidget {
 }
 
 class _DatePickerWidgetState extends State<DatePickerWidget> {
+  DateTime? _selectedDate;
+  TimeOfDay? _selectedTime;
   //late String currentTime;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(
-          'Select',
-          style: TextStyle(fontSize: 25),
-        ),
         ElevatedButton(
             onPressed: () async {
               DateTime? datePicked = await showDatePicker(
@@ -28,23 +26,40 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
               );
 
               if (datePicked != null) {
+                setState(() {
+                  _selectedDate = datePicked;
+                });
                 print(
                     'Date Selected: ${datePicked.year}-${datePicked.month}-${datePicked.day}');
               }
             },
-            child: Text("Date")),
+            child: Text(
+              _selectedDate != null
+                  ? 'Date: ${_selectedDate!.day}-${_selectedDate!.month}-${_selectedDate!.year}'
+                  : 'No date selected',
+              style: TextStyle(fontSize: 20),
+            )),
         ElevatedButton(
-            onPressed: () async {
-              TimeOfDay? pickedTime = await showTimePicker(
-                  context: context,
-                  initialTime: TimeOfDay.now(),
-                  initialEntryMode: TimePickerEntryMode.dial);
+          onPressed: () async {
+            TimeOfDay? pickedTime = await showTimePicker(
+                context: context,
+                initialTime: TimeOfDay.now(),
+                initialEntryMode: TimePickerEntryMode.dial);
 
-              if (pickedTime != null) {
-                print("Time selected: ${pickedTime.hour}-${pickedTime.minute}");
-              }
-            },
-            child: Text("Time"))
+            if (pickedTime != null) {
+              setState(() {
+                _selectedTime = pickedTime;
+              });
+              print("Time selected: ${pickedTime.hour}-${pickedTime.minute}");
+            }
+          },
+          child: Text(
+            _selectedTime != null
+                ? 'Time: ${_selectedTime!.format(context)}'
+                : 'No time selected',
+            style: const TextStyle(fontSize: 20),
+          ),
+        )
       ]),
     );
   }
