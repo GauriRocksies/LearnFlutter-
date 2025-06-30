@@ -32,7 +32,7 @@ class cardDemo extends StatelessWidget {
             ),
             SizedBox(
               width: double.infinity,
-              height: 300,
+              height: 170,
               child: Card(
                   elevation: 3,
                   child: DatePickerWidget(),
