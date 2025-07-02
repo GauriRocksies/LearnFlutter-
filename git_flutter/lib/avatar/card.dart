@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:git_flutter/avatar/DatePicker.dart';
+import 'package:git_flutter/avatar/gridDemo.dart';
 //import 'styleTh.dart';
 import 'userInput.dart';
 import 'CurrentDateTime.dart';
@@ -50,6 +51,16 @@ class cardDemo extends StatelessWidget {
                   child: DateTimeDemo(),
                   color: const Color.fromARGB(255, 180, 128, 251),
                   shadowColor: Colors.deepPurple,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  )),
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 500,
+              child: Card(
+                  elevation: 3,
+                  child: GridLayoutWidget(),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   )),
