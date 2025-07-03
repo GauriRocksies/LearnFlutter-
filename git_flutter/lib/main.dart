@@ -36,6 +36,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var emailText = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(
             height: 10,
           ),
-          cardDemo(emailText: emailText),
+          cardDemo(
+              emailText:
+                  emailText), //when the cards are to be used, uncomment the section
         ],
       )),
     );

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class circleDemo extends StatelessWidget {
+  //implementing the callback function
+  callBack() {
+    print("Clicked!!");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -9,7 +14,7 @@ class circleDemo extends StatelessWidget {
       //   height: 100,
       child: CircleAvatar(
         //backgroundImage: AssetImage('assets/images/SNOOT.jpg'),
-        backgroundColor: Colors.amber,
+        backgroundColor: const Color.fromARGB(255, 115, 81, 129),
         child: Column(
           children: [
             Container(
@@ -21,6 +26,13 @@ class circleDemo extends StatelessWidget {
                     fontFamily: 'FontHoney',
                     fontWeight: FontWeight.w500,
                     fontSize: 26)),
+
+//implementing callback function
+            ElevatedButton(
+                onPressed: () {
+                  callBack();
+                },
+                child: Text('Click me')),
           ],
         ),
         maxRadius: 120,
