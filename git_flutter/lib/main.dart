@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:git_flutter/avatar/card.dart';
-import 'avatar/circleDemo.dart';
+//import 'package:git_flutter/avatar/card.dart';
+import 'package:git_flutter/pages/DivWidget.dart';
+//import 'avatar/circleDemo.dart';
 import 'avatar/styleTh.dart';
 //import 'avatar/card.dart';
 
@@ -49,18 +50,20 @@ class _MyHomePageState extends State<MyHomePage> {
               .copyWith(color: Color.fromRGBO(228, 205, 233, 1)),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-      body: SingleChildScrollView(
-          child: Column(
-        children: [
-          circleDemo(),
-          SizedBox(
-            height: 10,
-          ),
-          cardDemo(
-              emailText:
-                  emailText), //when the cards are to be used, uncomment the section
-        ],
-      )),
+      // body: SingleChildScrollView(
+      //     child: Column(
+      //   children: [
+      //     circleDemo(),
+      //     SizedBox(
+      //       height: 10,
+      //     ),
+      //     cardDemo(
+      //         emailText:
+      //             emailText), //when the cards are to be used, uncomment the section
+      //   ],
+      // )),
+
+      body: Container(child: PageOne()),
     );
   }
 }

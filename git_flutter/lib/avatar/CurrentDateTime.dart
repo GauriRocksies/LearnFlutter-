@@ -18,7 +18,15 @@ class _DateTimeDemoState extends State<DateTimeDemo> {
     return Center(
       child: Column(
         children: [
-          Text('Current date : ${DateFormat('yMMMMd').format(time)}'),
+          Padding(padding: EdgeInsetsGeometry.only(top: 8)),
+          Container(
+              height: 35,
+              padding: EdgeInsets.only(top: 5),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 0, 0, 0),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Text('Current time : ${DateFormat('jms').format(time)}')),
           ElevatedButton(
               onPressed: () {
                 setState(() {});
