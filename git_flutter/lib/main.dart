@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_flutter/avatar/StackWidget.dart';
 //import 'package:git_flutter/avatar/card.dart';
 import 'package:git_flutter/pages/DivWidget.dart';
 //import 'avatar/circleDemo.dart';
@@ -63,7 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
       //   ],
       // )),
 
-      body: Container(child: PageOne()),
+      //body: Container(child: PageOne()),
+
+      body: Container(child: StackDemo()),
     );
   }
 }
