@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:git_flutter/avatar/StackWidget.dart';
 //import 'package:git_flutter/avatar/card.dart';
 import 'package:git_flutter/pages/DivWidget.dart';
+import 'package:git_flutter/widgets_custom/RoundedBtn.dart';
 //import 'avatar/circleDemo.dart';
 import 'avatar/styleTh.dart';
 //import 'avatar/card.dart';
@@ -66,7 +67,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
       //body: Container(child: PageOne()),
 
-      body: Container(child: StackDemo()),
-    );
+      //body: Container(child: StackDemo()),
+
+      body: RoundedButton(
+          btnName: 'Login',
+          icon: Icon(Icons.lock),
+          callBack: () {
+            print("Logged In");
+          },
+          textStyle: TextStyle(
+          fontSize: 18,
+          color: const Color.fromARGB(255, 245, 160, 160),
+          fontWeight: FontWeight.w600 ,),
+    ));
   }
 }

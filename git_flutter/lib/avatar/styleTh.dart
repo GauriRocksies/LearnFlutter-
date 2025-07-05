@@ -20,10 +20,13 @@ ThemeData styleTh() {
           fontSize: 25,
           fontWeight: FontWeight.bold,
           color: const Color.fromARGB(255, 0, 0, 0)),
+
+          
       headlineMedium: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w500,
           fontStyle: FontStyle.italic),
     ),
+    
   );
 }
