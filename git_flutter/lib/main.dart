@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:git_flutter/avatar/Wrap.dart';
 import 'package:git_flutter/avatar/gridDemo.dart';
+import 'package:git_flutter/pages/splash.dart';
+import 'package:git_flutter/shiftingPages.dart';
 import 'package:git_flutter/widgets/constrained.dart';
 //import 'package:git_flutter/avatar/StackWidget.dart';
 //import 'package:git_flutter/avatar/card.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           //   useMaterial3: true,
           ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: SplashScreen(),
     );
   }
 }
@@ -47,12 +49,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "HELLO",
-          style: Theme.of(context)
-              .textTheme
-              .headlineLarge!
-              .copyWith(color: Color.fromRGBO(228, 205, 233, 1)),
+        title: Center(
+          child: Text(
+            "CLASSICO",
+            style: Theme.of(context)
+                .textTheme
+                .headlineLarge!
+                .copyWith(color: Color.fromRGBO(228, 205, 233, 1)),
+          ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
       // body: SingleChildScrollView(
