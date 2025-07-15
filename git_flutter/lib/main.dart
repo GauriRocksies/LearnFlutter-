@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:git_flutter/avatar/Wrap.dart';
 import 'package:git_flutter/avatar/gridDemo.dart';
+import 'package:git_flutter/widgets/constrained.dart';
 //import 'package:git_flutter/avatar/StackWidget.dart';
 //import 'package:git_flutter/avatar/card.dart';
 //import 'package:git_flutter/pages/DivWidget.dart';
@@ -121,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ],
       //   ),
 
-      body: WrapWidget(),
+      body: ConstrainedDemo(),
     );
   }
 }
