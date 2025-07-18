@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:git_flutter/main.dart';
+import 'package:git_flutter/widgets/constrained.dart';
 
 class IntroPage extends StatelessWidget {
+  var nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +24,13 @@ class IntroPage extends StatelessWidget {
           SizedBox(
             height: 25,
           ),
+          TextField(
+            controller: nameController,
+          ),
           ElevatedButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return MyHomePage(title: "The 2nd Page");
+                return ConstrainedDemo(nameController.text.toString());
               }));
             },
             child: Text("Change"),
