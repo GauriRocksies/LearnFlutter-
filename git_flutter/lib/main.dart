@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_flutter/animation/foo.dart';
 import 'package:git_flutter/avatar/Wrap.dart';
 import 'package:git_flutter/avatar/gridDemo.dart';
 import 'package:git_flutter/pages/splash.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           //   useMaterial3: true,
           ),
-      home: SplashScreen(),
+      //home: SplashScreen(),
+      home: MyHomePage(title: 'Animation'),
     );
   }
 }
@@ -126,7 +128,9 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ],
       //   ),
 
-      body: IntroPage(),
+      //body: IntroPage(),
+
+      body: foo(),
     );
   }
 }
