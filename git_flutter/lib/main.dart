@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_flutter/animation/animatedOpacity.dart';
 import 'package:git_flutter/animation/foo.dart';
 import 'package:git_flutter/avatar/Wrap.dart';
 import 'package:git_flutter/avatar/gridDemo.dart';
@@ -130,7 +131,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
       //body: IntroPage(),
 
-      body: foo(),
+      body: Column(
+        children: [
+          foo(),
+          animatedOpacity(),
+        ],
+      ),
     );
   }
 }
