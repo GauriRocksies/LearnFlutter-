@@ -13,7 +13,7 @@ class _crossFadeState extends State<crossFade> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 2), () {
       reload();
     });
   }
@@ -34,13 +34,13 @@ class _crossFadeState extends State<crossFade> {
             color: Colors.pink.shade100,
           ),
           secondChild: Image.asset(
-            'assets/image/zen.jpg',
+            'assets/images/zen.jpg',
             width: 200,
             height: 100,
           ),
           crossFadeState:
               isFirst ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-          duration: Duration(seconds: 1),
+          duration: Duration(seconds: 2),
         )
       ],
     );
